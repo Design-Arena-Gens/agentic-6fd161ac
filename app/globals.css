@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  @apply bg-black text-white antialiased;
+}
+
+section {
+  @apply relative;
+}
+
+.gradient-ring::before {
+  content: '';
+  position: absolute;
+  inset: -60px;
+  background: radial-gradient(circle at center, rgba(53, 93, 255, 0.35), transparent 70%);
+  z-index: -1;
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(53, 93, 255, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
